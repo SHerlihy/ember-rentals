@@ -1,8 +1,8 @@
 <ul>
   {{#each this.cart.items as |item|}}
     <li>
-      <Rental @rental={{item}}/>
-      <button type="button" {{on "click" (fn this.remove item)}}>Remove</button>
+      <Rental @rental={{item}} @inCart={{true}}/>
     </li>
   {{/each}}
 </ul>
+<button type="button" {{on "click" (fn this.empty )}}>empty cart</button>
